@@ -1,0 +1,64 @@
+:root {
+    --uts-verde:        #6ab023;
+    --uts-verde-dark:   #558d1c;
+    --uts-verde-light:  #e8f5d0;
+    --uts-gris:         #f4f6f8;
+    --uts-texto:        #2d3748;
+    --uts-sombra:       0 10px 40px rgba(106,176,35,0.15);
+}
+
+.bg-uts {
+    background: linear-gradient(135deg, #e8f5d0 0%, #c8e6a0 50%, #a8d070 100%);
+    min-height: 100vh;
+}
+
+.card {
+    border-radius: 1rem !important;
+    box-shadow: var(--uts-sombra);
+    overflow: hidden;
+}
+
+.bg-uts-verde {
+    background: linear-gradient(135deg, var(--uts-verde) 0%, var(--uts-verde-dark) 100%);
+}
+
+.btn-uts-verde {
+    background: linear-gradient(135deg, var(--uts-verde) 0%, var(--uts-verde-dark) 100%);
+    border: none;
+    color: #fff;
+    transition: all 0.25s ease;
+}
+
+.btn-uts-verde:hover,
+.btn-uts-verde:focus {
+    background: linear-gradient(135deg, var(--uts-verde-dark) 0%, #3f6914 100%);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(106,176,35,0.4);
+}
+
+.btn-uts-verde:disabled { opacity: 0.75; cursor: not-allowed; }
+
+.form-control:focus {
+    border-color: var(--uts-verde);
+    box-shadow: 0 0 0 0.2rem rgba(106,176,35,0.25);
+}
+
+.form-check-input:checked {
+    background-color: var(--uts-verde);
+    border-color: var(--uts-verde);
+}
+
+.alert-danger  { border-left: 4px solid #dc3545; }
+.alert-success { border-left: 4px solid var(--uts-verde); }
+
+.card-footer {
+    background-color: var(--uts-gris);
+    border-top: 1px solid #e9ecef;
+    font-size: 0.78rem;
+}
+
+@media (max-width: 480px) {
+    .card-header { padding: 1.5rem 1rem; }
+    .card-body   { padding: 1.25rem !important; }
+}
